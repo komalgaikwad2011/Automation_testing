@@ -8,7 +8,9 @@ public class alertBoxTest extends baseTest{
 	public void boxHandle()
 	{
 		alertBox box=new alertBox(driver);
-		box.alertbox();
+		//box.alertbox();
+		//box.Confirmedalertbox();
+		box.Promptalertbox();
 	}
 
 }

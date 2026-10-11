@@ -18,5 +18,20 @@ public class alertBox {
 		Alert al=driver.switchTo().alert();
 		al.accept();
 	}
+	public void Confirmedalertbox()
+	{
+		driver.findElement(By.id("confirmBtn")).click();
+		Alert al=driver.switchTo().alert();
+		//al.accept();
+		al.dismiss();
+	}
+	public void Promptalertbox()
+	{
+		driver.findElement(By.id("promptBtn")).click();
+		Alert al=driver.switchTo().alert();
+		al.sendKeys("komal");
+		al.accept();
+	}
+	
 
 }
