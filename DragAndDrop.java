@@ -1,7 +1,9 @@
 package selenium.Automation_Testing_Website;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class DragAndDrop {
 	
@@ -13,7 +15,11 @@ public class DragAndDrop {
 	}
 	public void dragdrop()
 	{
-		driver.findElement(By.id("name"));
+		WebElement a=driver.findElement(By.id("draggable"));
+		WebElement b=driver.findElement(By.id("droppable"));
+		Actions action=new Actions(driver);
+		action.dragAndDrop(a, b).perform();
+		
 	}
 
 }
